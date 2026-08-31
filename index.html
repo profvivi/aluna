@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Integrador - Tecnociência, Robótica e Acessibilidade</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Barra Superior -->
+    <header class="top-bar">
+        <p>Projeto Integrador - Acessibilidade Digital, Robótica e Tecnociência</p>
+    </header>
+
+    <!-- Banner Principal com Menu de Acessibilidade -->
+    <section class="hero-banner">
+        <h1>Projeto Integrador</h1>
+        <p>Site acessível para pessoas com baixa visão</p>
+
+        <!-- Barra de Ferramentas de Acessibilidade -->
+        <div class="accessibility-menu" role="toolbar" aria-label="Ferramentas de acessibilidade">
+            <button id="btn-aumentar" aria-label="Aumentar tamanho do texto">A+</button>
+            <button id="btn-diminuir" aria-label="Diminuir tamanho do texto">A-</button>
+            <button id="btn-contraste" aria-label="Alternar alto contraste">Alto Contraste</button>
+            <button id="btn-ouvir" aria-label="Ouvir texto da página">
+                <span class="icon" aria-hidden="true">🔊</span> Ouvir Página
+            </button>
+        </div>
+    </section>
+
+    <!-- Conteúdo Principal (Card Luminoso do Objetivo Geral) -->
+    <main class="main-content" id="conteudo-principal">
+        <article class="content-section luminosity-card">
+            <h2>Objetivo do Projeto</h2>
+            <p>
+                Este site demonstra como HTML, CSS, JavaScript e Bootstrap podem ser utilizados 
+                para desenvolver páginas acessíveis, promovendo inclusão digital para pessoas com deficiência visual.
+            </p>
+        </article>
+    </main>
+        <!-- MENU DE NAVEGAÇÃO INTERNA ACESSÍVEL -->
+    <nav class="report-nav" aria-label="Navegação rápida do relatório">
+        <h3>Sumário do Relatório Técnico</h3>
+        <ul>
+            
+            <li><a href="#experimento1">Experimento 1: Disco de Newton</a></li>
+            <li><a href="#experimento2">Experimento 2: LED Fade-In/Out</a></li>
+            <li><a href="#experimento3">Experimento 3: LED RGB</a></li>
+            
+        </ul>
+    </nav>
+
+
+    <!-- Título de Seção dos Flashcards -->
+    <h2 class="section-title">Pilares do Projeto Integrador</h2>
+
+    <!-- Seção de Flashcards Interativos -->
+    <section class="cards-section">
+        <div class="cards-grid">
+            
+            <!-- Card 1: Tecnociência Óptica -->
+            <div class="flashcard card-azul" onclick="virarCard(this)" role="button" aria-expanded="false">
+                <div class="card-front">
+                    <h3>Tecnociência Óptica</h3>
+                    <span class="btn-card-link">Clique aqui</span>
+                </div>
+                <div class="card-back">
+                    <h3>Tecnociência Óptica</h3>
+                    <p>Estuda a refração da luz, lentes corretivas e foforrecepção retiniana. Na robótica, fundamenta os sistemas de visão computacional e sensores de luminosidade que adaptam interfaces digitais em tempo real, baseando-se no comportamento ocular de pessoas com baixa visão.</p>
+                </div>
+            </div>
+
+            <!-- Card 2: Integração com Robótica -->
+            <div class="flashcard card-verde" onclick="virarCard(this)" role="button" aria-expanded="false">
+                <div class="card-front">
+                    <h3>Integração com Robótica</h3>
+                    <span class="btn-card-link">Clique aqui</span>
+                </div>
+                <div class="card-back">
+                    <h3>Integração com Robótica</h3>
+                    <p>Conecta linhas de código a dispositivos físicos. Envolve o desenvolvimento de óculos inteligentes com sensores ultrassônicos e sistemas robóticos de rastreamento ocular (eye-tracking), permitindo que usuários com limitações motoras ou visuais severas controlem ambientes.</p>
+                </div>
+            </div>
+
+            <!-- Card 3: Programação Acessível -->
+            <div class="flashcard card-laranja" onclick="virarCard(this)" role="button" aria-expanded="false">
+                <div class="card-front">
+                    <h3>Programação Acessível</h3>
+                    <span class="btn-card-link">Clique aqui</span>
+                </div>
+                <div class="card-back">
+                    <h3>Programação Acessível</h3>
+                    <p>Une o desenvolvimento web (HTML/CSS/JS) a tecnologias assistivas. Cria a ponte lógica necessária para que os leitores de tela interpretem dados gerados por sensores ópticos e placas de robótica (como Arduino), transformando sinais físicos in loco em áudio ou Braille.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+           <!-- RELATÓRIOS ACADÊMICOS UNIFICADOS (COM ANCORAGEM ATIVADA) -->
+    <div id="relatorio-academico">
+        
+        <!-- SEÇÃO DE INVESTIGAÇÃO INICIAL -->
+        <section id="investigacao" class="report-container investigation-box">
+            <h3>Questão de Investigação Geral do Projeto</h3>
+            <p class="investigation-text"><strong>Como o estudo das cores e da luz contribui para o desenvolvimento de tecnologias que auxiliam pessoas com deficiência visual ou baixa visão?</strong></p>
+            <p><em>Resposta integrada pelas atividades:</em> O mapeamento óptico do olho humano aliado ao controle eletrônico e digital de emissores de luz permite construir algoritmos que corrigem e estendem a percepção visual residual. Ao manipular o contraste, intensidades por PWM e misturas cromáticas aditivas, conseguimos criar ambientes adaptativos personalizados e sensores inteligentes baseados em Inteligência Artificial que devolvem segurança, mobilidade e autonomia diária aos usuários.</p>
+        </section>
+
+        <!-- EXPERIMENTO 1: DISCO DE NEWTON -->
+        <section id="experimento1" class="report-container">
+            <header class="report-header">
+                <h2>Experimento 1: O Disco de Newton</h2>
+                <p class="subtitle">Estudo da composição da luz e sua aplicação na baixa visão</p>
+            </header>
+            <div class="report-body">
+                <section class="report-block">
+                    <h3>1. Apresentação da Atividade</h3>
+                    <p>O objetivo desta atividade foi compreender como a luz branca é formada e como as cores do espectro visível podem ser combinadas novamente por meio do Disco de Newton. Para construir o experimento, desenhamos o disco em uma folha de papel, dividimos o círculo em sete partes iguais e pintamos cada uma com uma das cores do arco-íris. Em seguida, colamos o desenho em um pedaço de papelão para deixá-lo mais resistente e fizemos um furo no centro para permitir sua rotação.</p>
+                    <p>Durante a atividade em sala, observamos o funcionamento do disco ao girá-lo rapidamente. Conforme aumentava a velocidade, as cores deixavam de ser percebidas separadamente e o disco passava a parecer branco ou cinza-claro. O experimento demonstrou, na prática, como o cérebro humano interpreta a mistura das cores da luz. A atividade também permitiu compreender a importância da óptica no desenvolvimento de tecnologias que auxiliam pessoas com deficiência visual ou baixa visão.</p>
+                    <div class="media-placeholder-grid" aria-label="Galeria de mídia do Disco de Newton">
+                        <div class="media-box"><img src="baixa-visao.png" alt="Desenho e pintura" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:8px;"><strong>Foto 1:</strong> Desenho e pintura.</div>
+                        <div class="media-box"><img src="leitor-tela.png" alt="Disco no papelão" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:8px;"><strong>Foto 2:</strong> Disco no papelão.</div>
+                        <div class="media-box"><img src="alto-contraste.png" alt="Teste de rotação" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:8px;"><strong>Foto 3:</strong> Teste do disco girando.</div>
+                        <div class="media-box video-box"><div style="width:100%; height:180px; background-color:#fee2e2; border-radius:8px; display:flex; align-items:center; justify-content:center; margin-bottom:8px; color:#991b1b; font-weight:bold;">▶ VÍDEO</div><strong>Vídeo 1:</strong> Demonstração em funcionamento.</div>
+                    </div>
+                </section>
+                <section class="report-block">
+                    <h3>2. Explicação Científica</h3>
+                    <p>Isaac Newton foi um cientista inglês que realizou importantes estudos sobre a luz. Em seus experimentos, ele demonstrou que a luz branca é formada pela combinação de várias cores. Ao utilizar um prisma, observou que a luz branca se decompõe em vermelho, laranja, amarelo, verde, azul, anil e violeta, formando o espectro visível. A decomposição da luz ocorre porque cada cor possui um comprimento de onda diferente e sofre desvios distintos ao atravessar um prisma. O espectro visível corresponde à parte da radiação eletromagnética que pode ser percebida pelo olho humano. No Disco de Newton acontece o processo contrário. Quando o disco gira rapidamente, todas as cores são vistas quase ao mesmo tempo. Devido à persistência da visão, o cérebro mistura essas cores, fazendo o disco parecer branco ou cinza-claro.</p>
+                </section>
+                <section class="report-block">
+                    <h3>3. Relação com a Deficiência Visual</h3>
+                    <p>Pessoas com baixa visão podem perceber a luz de maneiras diferentes, dependendo da condição que possuem. Algumas conseguem distinguir apenas diferenças entre claro e escuro, enquanto outras enxergam formas e algumas cores com dificuldade. Nem todas as pessoas percebem as cores da mesma maneira. Existem pessoas com daltonismo e outras doenças oculares que alteram a percepção das cores. A iluminação interfere diretamente na percepção dos objetos. Ambientes muito escuros dificultam a visualização, enquanto luzes muito fortes podem causar ofuscamento e desconforto visual. Compreender a formação das cores é importante porque permite desenvolver tecnologias que aumentam o contraste, melhoram a iluminação e facilitam a identificação de objetos, tornando ambientes e equipamentos mais acessíveis.</p>
+                </section>
+            </div>
+        </section>
+
+        <!-- EXPERIMENTO 2: LED FADE-IN E FADE-OUT -->
+        <section id="experimento2" class="report-container">
+            <header class="report-header">
+                <h2>Experimento 2: LED Fade-In e Fade-Out</h2>
+                <p class="subtitle">Controle de intensidade luminosa utilizando técnicas de hardware assistivo com Arduino</p>
+            </header>
+            <div class="report-body">
+                <section class="report-block">
+                    <h3>1. Apresentação da Atividade</h3>
+                    <p>A atividade teve como objetivo compreender o funcionamento do controle da intensidade luminosa de um LED e relacionar esse conhecimento ao desenvolvimento de tecnologias assistivas para pessoas com deficiência visual ou baixa visão. Para isso, foi utilizado o simulador Tinkercad, onde foi criado um circuito eletrônico contendo uma placa Arduino, um LED e um resistor de proteção. O circuito foi programado para realizar o efeito Fade-In e Fade-Out, no qual o LED aumenta e diminui gradualmente seu brilho. A programação utilizou a técnica PWM (Modulação por Largura de Pulso), permitindo controlar a quantidade de energia enviada ao LED. Durante a simulação, foi observado que a alteração dos valores enviados pelo Arduino modificava a intensidade da luz emitida pelo LED.</p>
+                    <div class="media-placeholder-grid" aria-label="Galeria de mídia do Circuito LED Tinkercad">
+                        <div class="media-box"><img src="circuito1.png" alt="Circuito Tinkercad" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:8px;"><strong>Imagem 1:</strong> Circuito no Tinkercad.</div>
+                        <div class="media-box"><img src="circuito2.png" alt="Código Arduino" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:8px;"><strong>Imagem 2:</strong> Programação Fade-In/Out.</div>
+                        <div class="media-box"><img src="circuito3.png" alt="LED brilhando" style="width:100%; height:180px; object-fit:cover; border-radius:8px; margin-bottom:8px;"><strong>Imagem 3:</strong> LED na simulação.</div>
+                    </div>
+                </section>
+                <section class="report-block">
+                    <h3>2. Explicação Científica</h3>
+                    <p>Um LED (Light Emitting Diode ou Diodo Emissor de Luz) é um componente eletrônico que produz luz quando uma corrente elétrica passa por ele. Esse fenômeno ocorre devido à transformação da energia elétrica em energia luminosa por meio de materiais semicondutores. A intensidade luminosa corresponde à quantidade de luz emitida por uma fonte luminosa. Quanto maior a energia fornecida ao LED, maior tende a ser seu brilho. O controle do brilho pode ser realizado utilizando PWM (Pulse Width Modulation), uma técnica que altera rapidamente o tempo em que o LED permanece ligado e desligado. Como essa alteração acontece em alta velocidade, o olho humano percebe diferentes níveis de luminosidade.</p>
+                </section>
+                <section class="report-block">
+                    <h3>3. Relação com a Deficiência Visual</h3>
+                    <p>A iluminação possui grande influência na forma como pessoas com baixa visão percebem os ambientes. Algumas pessoas precisam de maior intensidade luminosa para identificar objetos, enquanto outras podem apresentar desconforto com luz muito intensa ou com reflexos. Uma iluminação inadequada pode causar dificuldades como falta de contraste, dificuldade para localizar obstáculos, aumento do risco de quedas e redução da independência nas atividades diárias. Uma iluminação planejada pode melhorar a segurança ao destacar caminhos, degraus, objetos importantes e áreas de circulação. Sistemas que permitem ajustar automaticamente a intensidade da luz podem adaptar o ambiente às necessidades de cada pessoa de forma confortável.</p>
+                </section>
+            </div>
+        </section>
+
+        
+
+        <!-- EXPERIMENTO 3: LED RGB -->
+         <section id="experimento3" class="report-container"></section>
+        <section class="report-container">
+            <header class="report-header">
+                <h2>O LED RGB e a Síntese Aditiva</h2>
+                <p class="subtitle">Exploração eletrônica das misturas de luzes aplicadas ao daltonismo e contraste</p>
+            </header>
+
+            <div class="report-body">
+                <section class="report-block">
+                    <h3>1. Apresentação da Atividade</h3>
+                    <p>O objetivo desta atividade foi compreender o funcionamento de um LED RGB e o modelo de cores RGB por meio da simulação de um circuito eletrônico no Tinkercad. Durante o desenvolvimento, foi montado um circuito utilizando um LED RGB, resistores e uma placa Arduino. Cada terminal do LED foi conectado a uma porta digital do Arduino, permitindo controlar separadamente as cores vermelha, verde e azul através da programação.</p>
+                    <p>Após a montagem do circuito, foi criado um código para acender cada cor individualmente e também diferentes combinações entre elas. Em seguida, foi iniciada a simulação no Tinkercad para verificar se o circuito estava funcionando corretamente. Durante os testes foi possível observar a mudança das cores conforme a programação. O resultado obtido foi satisfatório, pois o LED RGB apresentou diferentes cores produzidas pela combinação das intensidades das luzes vermelha, verde e azul, demonstrando na prática o funcionamento da mistura aditiva das cores.</p>
+                    
+                    <div class="media-placeholder-grid" aria-label="Galeria de mídia do LED RGB">
+                        <div class="media-box"><strong>Imagem 4:</strong> Montagem inicial do circuito no Tinkercad.</div>
+                        <div class="media-box"><strong>Imagem 5:</strong> Programação do Arduino controlando o LED RGB.</div>
+                        <div class="media-box"><strong>Imagem 6:</strong> Simulação em funcionamento mostrando diferentes cores.</div>
+                        <div class="media-box video-box"><strong>Vídeo 2:</strong> Demonstração em vídeo da simulação funcionando e as mudanças de cor do LED.</div>
+                    </div>
+                </section>
+
+                <section class="report-block">
+                    <h3>2. Explicação Científica</h3>
+                    <p>O LED RGB é um componente eletrônico formado por três LEDs internos: um vermelho (Red), um verde (Green) e um azul (Blue). Cada um deles pode ser controlado de forma independente, permitindo produzir diversas cores. O sistema RGB é um modelo de cores baseado na luz. Ele utiliza a combinação das três cores primárias da luz para formar milhares de outras cores. Esse processo é chamado de mistura aditiva.</p>
+                    <p>Na mistura aditiva: Vermelho + Verde = Amarelo; Vermelho + Azul = Magenta; Verde + Azul = Ciano; Vermelho + Verde + Azul = Branco. Alterando a intensidade de cada cor é possível produzir milhões de tonalidades diferentes. O sistema RGB é utilizado em diversas tecnologias, como televisores, monitores, celulares, tablets, painéis de LED e sistemas de iluminação inteligente.</p>
+                </section>
+
+                <section class="report-block">
+                    <h3>3. Relação com a Deficiência Visual</h3>
+                    <p>O contraste entre as cores facilita a percepção visual porque torna objetos, textos e sinais mais fáceis de distinguir. Pessoas com baixa visão conseguem identificar melhor informações quando existe alto contraste, como letras pretas sobre fundo branco ou amarelo. A escolha adequada das cores é fundamental na comunicação visual, pois evita dificuldades de leitura e interpretação das informações.</p>
+                    <p>As cores também podem melhorar a orientação em ambientes por meio da identificação de setores, corredores, portas, escadas e placas de sinalização. O conhecimento sobre luz e cores contribui para o desenvolvimento de tecnologias assistivas, permitindo criar equipamentos com melhor contraste, iluminação adaptativa, reconhecimento de objetos e sistemas inteligentes de auxílio à mobilidade.</p>
+                </section>
+            </div>
+        </section>
+
+        <!-- TECNOLOGIAS EXISTENTES ANALISADAS -->
+        <section class="report-container">
+            <h3>4. Tecnologias Assistivas Existentes Analisadas</h3>
+            <ul class="tech-list">
+                <li><strong>OrCam MyEye (OrCam Technologies):</strong> Dispositivo com câmera e IA que lê textos, reconhece rostos, produtos e cédulas de dinheiro em tempo real, transformando dados visuais em áudio.</li>
+                <li><strong>EnChroma Glasses (EnChroma):</strong> Óculos equipados com filtros ópticos seletivos projetados para melhorar a percepção das cores e facilitar a diferenciação tonal para pessoas com daltonismo.</li>
+                <li><strong>Lupa Eletrônica Portátil (HumanWare, Eschenbach, Optelec):</strong> Dispositivos focados na ampliação digital de imagens e textos com ajustes de alto contraste para leitura e estudos.</li>
+                <li><strong>Sistema de Iluminação Inteligente Philips Hue (Philips):</strong> LEDs RGB controlados eletronicamente via software para ajustar a intensidade e temperatura de cor do ambiente focado no conforto visual.</li>
+                <li><strong>Aplicativo Seeing AI (Microsoft):</strong> Aplicativo móvel baseado em inteligência artificial e visão computacional para descrever com precisão ambientes, pessoas, textos e objetos por voz.</li>
+            </ul>
+        </section>
+
+        <!-- PROPOSTAS DE INOVAÇÃO DO GRUPO -->
+        <section class="report-container proposal-box">
+            <h3>5. Nossas Propostas de Tecnologia Assistiva</h3>
+            
+            <div style="margin-bottom: 25px;">
+                <h4>Proposta 1: SmartColor Vision</h4>
+                <p>Um óculos equipado com câmera que identifica objetos e aumenta automaticamente o contraste das cores do ambiente em tempo real na visão do usuário, além de informar por áudio o que está sendo observado.</p>
+                <p><small>Componentes: Câmera, microcontrolador, bateria, alto-falante, IA e fones de ouvido.</small></p>
+            </div>
+
+            <div style="border-top: 1px dashed #cbd5e1; padding-top: 20px;">
+                <h4>Proposta 2: ColorGuide AI / Luz Inteligente Assistiva</h4>
+                <p>Dispositivo de mapeamento interno e luminária adaptativa automatizada equipada com sensores de luminosidade e IA. O sistema identifica as condições de sombreamento do cômodo e ajusta de forma autônoma o brilho de LEDs RGB locais, emitindo guias sonoros descritivos e sinais cromáticos focados na orientação espacial (Verde: livre; Amarelo: atenção; Vermelho: obstáculo).</p>
+                <p><small>Componentes: Arduino, LED RGB de alta potência, sensor de luz LDR, câmera, sensor ultrassônico de distância, alto-falante e bateria.</small></p>
+            </div>
+        </section>
+
+        <!-- METODOLOGIA E IA -->
+        <section class="report-container row-ai">
+            <h3>6. Inteligência Artificial e Metodologia</h3>
+            <p>Durante o desenvolvimento do trabalho foi utilizada a ferramenta ChatGPT como apoio na organização das informações, explicação detalhada de conceitos de física óptica e eletrônica, estruturação linear dos relatórios e elaboração de ideias para as tecnologias assistivas propostas.</p>
+            <p>Os prompts aplicados abordaram o funcionamento eletrônico do LED RGB, o efeito prático do controle de brilho via PWM, a relação da iluminação com a baixa visão e o mapeamento de patologias oculares. Todas as informações científicas extraídas foram devidamente checadas e validadas pelo grupo utilizando fontes confiáveis como portais de saúde governamentais, artigos acadêmicos e manuais oficiais dos fabricantes.</p>
+        </section>
+
+        <!-- CONCLUSÃO -->
+        <section class="report-container">
+            <h3>7. Conclusão Geral do Projeto</h3>
+            <p>A realização deste conjunto de atividades práticas e investigações bibliográficas permitiu compreender que o estudo da física óptica da luz e das cores possui aplicações sociais profundas e valiosas. A experimentação sequencial — desde a síntese aditiva do Disco de Newton até a modulação prática de brilhos e espectros cromáticos via Arduino com técnicas PWM e LEDs RGB — demonstra que podemos recriar digitalmente ambientes e telas acessíveis.</p>
+            <p>Conclui-se que o contraste bem estruturado e a iluminação personalizada são pilares indispensáveis para derrubar as barreiras da comunicação e da mobilidade diária. Ao unir o desenvolvimento de softwares semânticos, montagens mecânicas robóticas e o conhecimento da tecnociência óptica, pavimentamos o surgimento de soluções assistivas inovadoras capazes de garantir de forma universal a dignidade, a autonomia espacial e uma melhor qualidade de vida para indivíduos com deficiência visual ou baixa visão.</p>
+        </section>
+
+        <!-- REFERÊNCIAS -->
+        <section class="report-container references-block">
+            <h3>8. Referências Bibliográficas (Normas ABNT)</h3>
+            <p>ARDUINO. <strong>Arduino Documentation</strong>. Ivrea: Arduino, 2026. Disponível em: &lt;https://arduino.cc&gt;. Acesso em: 03 ago. 2026.</p>
+            <p>ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. <strong>NBR 6023:2018 – Referências</strong>. Rio de Janeiro: ABNT, 2018.</p>
+            <p>BRASIL. Ministério da Saúde. <strong>Saúde da Pessoa com Deficiência Visual</strong>. Brasília: Ministério da Saúde, 2022.</p>
+            <p>ENCHROMA. <strong>EnChroma Glasses</strong>. Disponível em: &lt;https://enchroma.com&gt;. Acesso em: 5 ago. 2026.</p>
+            <p>MICROSOFT. <strong>Seeing AI</strong>. Disponível em: &lt;https://microsoft.com;. Acesso em: 5 ago. 2026.</p>
+            <p>NATIONAL INSTITUTE OF BUILDING SCIENCES. <strong>Lighting and accessibility guidelines</strong>. Washington: NIBS, 2021.</p>
+            <p>NEWTON, Isaac. <strong>Opticks</strong>: or, a treatise of the reflections, refractions, inflections and colours of light. London: Royal Society, 1704.</p>
+            <p>ORCAM TECHNOLOGIES. <strong>OrCam MyEye</strong>. Disponível em: &lt;https://orcam.com&gt;. Acesso em: 5 ago. 2026.</p>
+            <p>TINKERCAD. <strong>Autodesk Tinkercad: Circuit Design and Simulation</strong>. Disponível em: &lt;https://tinkercad.com&gt;. Acesso em: 3 ago. 2026.</p>
+            <p>WORLD HEALTH ORGANIZATION. <strong>World report on vision</strong>. Geneva: WHO, 2019.</p>
+        </section>
+
+    </div> <!-- Fecha o container relatorio-academico -->
+
+    <!-- RODAPÉ SIMPLES E ACESSÍVEL -->
+    <footer class="simple-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 - Desenvolvido pelo Grupo do Projeto Integrador de Acessibilidade Digital</p>
+            <p><small>Tecnologia assistiva voltada para a inclusão, robótica e tecnociência.</small></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+

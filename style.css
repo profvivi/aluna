@@ -1,0 +1,438 @@
+/* ========================================================
+   1. CONFIGURAÇÕES GLOBAIS E VARIÁVEIS
+   ======================================================== */
+:root {
+    --bg-primary: #1e75ff;
+    --bg-dark: #1256c4;
+    --text-light: #ffffff;
+    --text-dark: #333333;
+    --font-base: 16px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    font-size: var(--font-base);
+    color: var(--text-dark);
+    background-color: #f4f7fc;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* ========================================================
+   2. BARRA SUPERIOR E HERO BANNER (MENU DE ACESSIBILIDADE)
+   ======================================================== */
+.top-bar {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 10px 0;
+    font-size: 0.95rem;
+}
+
+.hero-banner {
+    background-color: var(--bg-primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.hero-banner h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+.hero-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+}
+
+.accessibility-menu {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.accessibility-menu button {
+    border: none;
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: transform 0.1s;
+}
+
+#btn-aumentar, #btn-diminuir { background-color: #ffffff; color: #000000; }
+#btn-contraste { background-color: #ffbf00; color: #000000; }
+#btn-ouvir { background-color: #13854e; color: #ffffff; display: flex; align-items: center; gap: 6px; }
+
+/* ========================================================
+   3. SEÇÃO DO OBJETIVO (CARD LUMINOSO)
+   ======================================================== */
+.main-content {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 50px 20px 20px 20px;
+}
+
+.luminosity-card {
+    background-color: #ffffff;
+    border: 1px solid rgba(30, 117, 255, 0.3);
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 0 25px rgba(30, 117, 255, 0.2);
+}
+
+.content-section h2 {
+    font-size: 2rem;
+    color: var(--bg-dark);
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.content-section p {
+    font-size: 1.15rem;
+    line-height: 1.6;
+}
+
+/* ========================================================
+   4. SEÇÃO DE FLASHCARDS INTERATIVOS (PILARES)
+   ======================================================== */
+.section-title {
+    max-width: 960px;
+    margin: 40px auto 20px auto;
+    padding: 0 20px;
+    font-size: 2rem;
+    color: var(--bg-dark);
+}
+
+.cards-section {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px 40px 20px;
+}
+
+.cards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.flashcard {
+    min-height: 280px;
+    cursor: pointer;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+}
+
+.card-front {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 30px;
+    border-radius: 12px;
+    gap: 20px;
+}
+
+.card-front h3 {
+    margin: 0;
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.btn-card-link {
+    color: #ffffff;
+    text-decoration: underline;
+    font-size: 1.1rem;
+    font-weight: bold;
+    padding: 8px 20px;
+    border: 2px solid #ffffff;
+    border-radius: 6px;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.card-back {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    padding: 30px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.card-back h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    color: #1256c4;
+    font-size: 1.5rem;
+}
+
+.card-back p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin: 0;
+    color: #334155;
+}
+
+.flashcard.flipped .card-front { display: none; }
+.flashcard.flipped .card-back { display: flex; }
+
+.card-azul .card-front { background: linear-gradient(135deg, #1e75ff, #0a53cd); }
+.card-verde .card-front { background: linear-gradient(135deg, #13854e, #0b5933); }
+.card-laranja .card-front { background: linear-gradient(135deg, #ff9100, #d45d00); }
+/* ========================================================
+   5. CONTAINER DO RELATÓRIO ACADÊMICO UNIFICADO (CORES ALTERNADAS)
+   ======================================================== */
+.report-container {
+    max-width: 960px;
+    margin: 30px auto 40px auto;
+    padding: 40px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    box-sizing: border-box;
+}
+
+/* 🎨 ALTERNÂNCIA DE CORES SUAVES PARA OS BLOCOS DO RELATÓRIO */
+
+/* Bloco de Investigação Inicial - Azul Suave */
+.investigation-box {
+    border: 1px solid #bfdbfe;
+    background-color: #f0f7ff; /* Tom pastel azul bem leve */
+}
+.investigation-text {
+    font-size: 1.1rem !important;
+    color: #1e40af !important; /* Texto em azul escuro para contraste */
+    line-height: 1.6 !important;
+}
+
+/* Experimento 1 (Disco de Newton) - Cinza Azulado Limpo */
+#relatorio-academico > section:nth-of-type(2) {
+    background-color: #f8fafc; 
+    border: 1px solid #e2e8f0;
+}
+
+/* Experimento 2 (LED Fade) - Verde Pastel Suave */
+#relatorio-academico > section:nth-of-type(3) {
+    background-color: #f0fdf4; 
+    border: 1px solid #dcfce7;
+}
+#relatorio-academico > section:nth-of-type(3) h3 {
+    color: #166534;
+    border-left-color: #22c55e;
+}
+
+/* Experimento 3 (LED RGB) - Azul Clínico Suave */
+#relatorio-academico > section:nth-of-type(4) {
+    background-color: #f5f3ff; 
+    border: 1px solid #e0e7ff;
+}
+#relatorio-academico > section:nth-of-type(4) h3 {
+    color: #3730a3;
+    border-left-color: #6366f1;
+}
+
+/* Lista de Tecnologias Existentes - Cinza Neutro Suave */
+#relatorio-academico > section:nth-of-type(5) {
+    background-color: #fafafa;
+    border: 1px solid #eaeaea;
+}
+
+/* Caixa da Proposta Inovadora (SmartColor) - Verde Clarinho Assistivo */
+.proposal-box { 
+    background-color: #f0fdf4; 
+    border: 2px dashed #bbf7d0; 
+    border-radius: 12px; 
+    padding: 30px; 
+}
+.proposal-box h3 { color: #166534; border-left-color: #22c55e; }
+.proposal-box h4 { margin-top: 0; margin-bottom: 8px; font-size: 1.3rem; color: #166534; }
+.proposal-box p { font-size: 1.1rem !important; color: #14532d; margin-bottom: 12px; }
+.proposal-box strong { color: #166534; }
+.proposal-box .final-note { margin-top: 20px; padding-top: 15px; border-top: 1px solid #bbf7d0; font-style: italic; color: #166534; }
+
+/* Bloco de Inteligência Artificial - Roxo/Lilás Suave */
+.row-ai { 
+    background-color: #fdf4ff; 
+    border: 1px solid #f3e8ff; 
+    border-radius: 12px; 
+    padding: 35px; 
+}
+.row-ai h3 { color: #6b21a8; border-left-color: #a855f7; }
+
+/* Bloco de Conclusão Geral - Off-White Suave */
+#relatorio-academico > section:nth-of-type(8) {
+    background-color: #fffbeb;
+    border: 1px solid #fef3c7;
+}
+#relatorio-academico > section:nth-of-type(8) h3 {
+    color: #92400e;
+    border-left-color: #f59e0b;
+}
+
+/* ========================================================
+   ESTRUTURAS INTERNAS COMPARTILHADAS (NIVELADAS)
+   ======================================================== */
+.report-header {
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+.report-header h2 { font-size: 2.1rem; color: #0f172a; margin: 0 0 8px 0; }
+.report-header .subtitle { font-size: 1.1rem; color: #64748b; margin: 0; }
+.report-block { margin-bottom: 40px; }
+
+/* Títulos h3 padronizados */
+.report-block h3, .report-container h3 {
+    font-size: 1.4rem !important;
+    color: var(--bg-dark);
+    margin-top: 0;
+    margin-bottom: 15px;
+    border-left: 4px solid var(--bg-primary);
+    padding-left: 12px;
+}
+
+/* Parágrafos padronizados */
+.report-block p, .report-container p {
+    font-size: 1.1rem !important;
+    line-height: 1.7 !important;
+    color: #334155;
+    margin-bottom: 16px;
+    text-align: justify;
+}
+
+/* Grid de Mídias */
+.media-placeholder-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 15px; margin: 25px 0; }
+.media-box { background-color: #ffffff; border: 2px dashed #cbd5e1; border-radius: 8px; padding: 20px; font-size: 1.1rem !important; color: #475569; text-align: center; }
+.video-box { background-color: #fff5f5; border-color: #fca5a5; color: #991b1b; }
+
+/* Listas */
+.tech-list { list-style: none; padding: 0; margin: 0; }
+.tech-list li { background-color: #ffffff; border: 1px solid #e2e8f0; border-radius: 8px; padding: 15px 20px; margin-bottom: 12px; font-size: 1.1rem !important; line-height: 1.6; color: #334155; }
+.tech-list li strong { color: var(--bg-dark); }
+
+/* Referências */
+.references-block p { text-align: left; font-size: 1.1rem !important; color: #475569; margin-bottom: 12px; padding-left: 20px; text-indent: -20px; }
+
+/* ========================================================
+   6. ESTILIZAÇÃO DO RODAPÉ SIMPLES
+   ======================================================== */
+.simple-footer {
+    background-color: var(--bg-dark);
+    color: var(--text-light);
+    text-align: center;
+    padding: 30px 20px;
+    margin-top: 60px;
+    border-top: 4px solid var(--bg-primary);
+}
+.simple-footer p { margin: 5px 0; font-size: 1.1rem; }
+.simple-footer small { color: rgba(255, 255, 255, 0.7); font-size: 0.95rem; }
+
+
+/* ========================================================
+   7. 📌 COMPATIBILIDADE COM ALTO CONTRASTE (BLINDADO)
+   ======================================================== */
+body.alto-contraste { background-color: #000000 !important; color: #ffffff !important; }
+body.alto-contraste .top-bar, body.alto-contraste .hero-banner, body.alto-contraste .simple-footer { background-color: #000000 !important; color: #ffffff !important; border-color: #ffffff !important; }
+body.alto-contraste .accessibility-menu button { background-color: #000000 !important; color: #ffff00 !important; border: 2px solid #ffff00 !important; }
+body.alto-contraste .luminosity-card { background-color: #111111 !important; border: 2px solid #ffff00 !important; box-shadow: 0 0 30px rgba(255, 255, 0, 0.65) !important; }
+body.alto-contraste .content-section h2, body.alto-contraste .section-title, body.alto-contraste .report-block h3, body.alto-contraste .report-header h2, body.alto-contraste .row-ai h3, body.alto-contraste .proposal-box h4 { color: #ffff00 !important; }
+body.alto-contraste .content-section p, body.alto-contraste .report-block p, body.alto-contraste .report-header .subtitle, body.alto-contraste .row-ai p, body.alto-contraste .references-block p, body.alto-contraste .simple-footer small { color: #ffffff !important; }
+
+body.alto-contraste .flashcard { box-shadow: none !important; border: 2px solid #ffffff !important; }
+body.alto-contraste .card-front, body.alto-contraste .card-back { background: #000000 !important; }
+body.alto-contraste .card-front h3, body.alto-contraste .card-back h3 { color: #ffff00 !important; }
+body.alto-contraste .card-back p { color: #ffffff !important; }
+body.alto-contraste .btn-card-link { border-color: #ffff00 !important; color: #ffff00 !important; background-color: transparent !important; }
+
+body.alto-contraste .report-container { background-color: #000000 !important; border: 2px solid #ffffff !important; box-shadow: none !important; }
+body.alto-contraste .investigation-box { border-color: #ffff00 !important; background-color: #000000 !important; }
+body.alto-contraste .media-box { background-color: #111111 !important; border: 1px dashed #ffffff !important; color: #ffffff !important; }
+body.alto-contraste .tech-list li, body.alto-contraste .proposal-box { background-color: #000000 !important; border: 1px solid #ffffff !important; color: #ffffff !important; }
+body.alto-contraste .tech-list li strong, body.alto-contraste .proposal-box strong { color: #ffff00 !important; }
+body.alto-contraste .proposal-box .final-note { border-top-color: #ffffff !important; color: #ffffff !important; }
+
+
+/* Ativa o efeito de rolagem suave quando clica nos links do sumário */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilização do Menu de Navegação Rápida */
+.report-nav {
+    max-width: 960px;
+    margin: 30px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+    box-sizing: border-box;
+}
+
+.report-nav h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 1.3rem;
+    color: var(--bg-dark);
+}
+
+.report-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 10px;
+}
+
+.report-nav a {
+    display: block;
+    color: var(--bg-dark);
+    text-decoration: none;
+    font-size: 1.05rem;
+    font-weight: 500;
+    padding: 8px 12px;
+    background-color: #f8fafc;
+    border: 1px solid #edf2f7;
+    border-radius: 6px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.report-nav a:hover {
+    background-color: var(--bg-primary);
+    color: #ffffff;
+}
+
+/* Regra para o Modo de Alto Contraste */
+body.alto-contraste .report-nav {
+    background-color: #000000 !important;
+    border: 2px solid #ffffff !important;
+}
+body.alto-contraste .report-nav h3 {
+    color: #ffff00 !important;
+}
+body.alto-contraste .report-nav a {
+    background-color: #000000 !important;
+    color: #ffff00 !important;
+    border: 1px solid #ffff00 !important;
+    text-decoration: underline;
+}
+body.alto-contraste .report-nav a:hover {
+    background-color: #ffff00 !important;
+    color: #000000 !important;
+}
